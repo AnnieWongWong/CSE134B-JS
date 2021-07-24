@@ -17,7 +17,6 @@
              contents of an <output> tag to “The value returned by 
             the confirm method is : (the value)”  -->
             <button id="confirm_button" type="button">Confirm</button>
-            <output></output>
             <!-- For the prompt buttons, you also will need to write a
                  message like “User didn’t enter anything” in the negative
                 case (the user can always cancel instead of answering).
@@ -40,9 +39,17 @@
                 // contents of an <output> tag to “The value returned by 
                 // the confirm method is : (the value)”
                 function send_confirmation () {
+                    let output_tag;
+                    let txt;
                     let co;
-                    co = document.getElementById('confirm_button');
-                   (`The value returned by the confirm method is : ${co.nodeValue}`);
+                    
+                    co = document.getElementById('confirm_button')
+                    output_tag = document.createElement('output');
+                    txt = document.createTextNode(`The value returned by the confirm method is : ${co.nodeValue}`)
+                    
+                    output_tag.appendChild(txt);
+                    document.body.appendChild(output_tag);
+                    // document.body.innerHTML += ''
                 }
 
             </script>
