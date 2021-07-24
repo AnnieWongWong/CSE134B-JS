@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="dist/purify.min.js"></script>
+        <title>Annie's Portfolio</title>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <!-- show a built in Alert -->
+            <button id="alert_button" type="button">Alert</button>
+            <!-- echo the value back to the web page by setting the
+             contents of an <output> tag to “The value returned by 
+            the confirm method is : (the value)”  -->
+            <button id="confirm_button" type="button">Confirm</button>
+            <output></output>
+            <!-- For the prompt buttons, you also will need to write a
+                 message like “User didn’t enter anything” in the negative
+                case (the user can always cancel instead of answering).
+                Use template strings to make this easier. -->
+            <button id="prompt" type="button">Prompt</button>
+            <!-- let clean = DOMPurify.sanitize( dirty , {USE_PROFILES: {html: true}} ); -->
+            <!-- The resulting HTML can be written into a DOM element using innerHTML or the DOM using document.write() -->
+            <button id="safer_prompt" type="button">Safer Prompt</button>
+
+            <script>
+                document.getElementById('alert_button').addEventListener('click', send_alert);
+                document.getElementById('confirm_button').addEventListener('click', send_confirmation);
+                
+                function send_alert () {
+                    alert('loaded');
+                }
+
+
+                // echo the value back to the web page by setting the
+                // contents of an <output> tag to “The value returned by 
+                // the confirm method is : (the value)”
+                function send_confirmation () {
+                    let co;
+                    co = document.getElementById('confirm_button');
+                   (`The value returned by the confirm method is : ${co.nodeValue}`);
+                }
+
+            </script>
+            
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    
+</html>
