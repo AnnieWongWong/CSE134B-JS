@@ -5,6 +5,7 @@ let blogEntryListDate = [];
 let blogEntryListSummary = [];
 let blogEntryCount = 0;
 let index = 0;
+// let confirmm = false;
 
 function init() {
     document.getElementById('addpost').addEventListener('click', show_add_post);
@@ -12,8 +13,16 @@ function init() {
     document.getElementById('post_save').addEventListener('click', save_post);
     document.getElementById('edit_post_cancel').addEventListener('click', edit_cancel_post);
     document.getElementById('edit_post_save').addEventListener('click', edit_save_post);
+    // document.getElementById('confirm_cancel').addEventListener('click', cancel_confirm);
+    // document.getElementById('confirm_ok').addEventListener('click', cancel_ok);
+    detect_no_entries();
 }
 
+function detect_no_entries() {
+    let entryul = document.querySelector('#blogEntries');
+    var hide = entryul.children.length == 0 ? 'block' : 'none';
+    document.querySelector('#noEntries').style.display = hide;
+}
 
 function show_add_post() {
     let box;
@@ -84,17 +93,35 @@ function save_post() {
         document.getElementById('blogEntries').appendChild(blogItem);
 
         box.close();
-    
+        detect_no_entries();
     }
 
 }
 
-function delEntry() {
-    let entryID = this.parentNode;
+// function cancel_confirm() {
+//     let con = document.getElementById('confirm_del');
+//     con.close();
+//     confirmm = false;
+// }
 
-    this.removeEventListener('click', editEntry);
-    this.removeEventListener('click', delEntry);
-    this.parentNode.parentNode.removeChild(entryID);
+// function cancel_ok() {
+//     confirmm = true;
+// }
+
+function delEntry() {
+    // let con = document.getElementById('confirm_del');
+    // con.showModal();
+    
+    let con = confirm('Confirm delete entry?');
+
+    if (con) {
+        let entryID = this.parentNode;
+
+        this.removeEventListener('click', editEntry);
+        this.removeEventListener('click', delEntry);
+        this.parentNode.parentNode.removeChild(entryID);
+        detect_no_entries();
+    }
 }
 
 function editEntry() {
@@ -107,10 +134,9 @@ function editEntry() {
     let box;
     box = document.getElementById('edit_post_pop');
     box.showModal();
-    
+
 }
 
-// fix later
 function edit_save_post() {
     let title = document.getElementById('edit_postTitle').value;
     let date = document.getElementById('edit_year').value;
@@ -129,14 +155,11 @@ function edit_save_post() {
         blogEntryListDate[index] = cleanDate;
         blogEntryListSummary[index] = cleanSummary;
 
-        document.querySelector(`#entry${index} > h2`).innerHTML = `Prompt result : User didn't enter anything`;
-        document.querySelector(`#entry${index} > h3`).innerHTML = `Prompt result : User didn't enter anything`;
-        document.querySelector(`#entry${index} > p`).innerHTML = `Prompt result : User didn't enter anything`;
-        // document.getElementById("title " + index).innerHTML  = cleanTitle;
-        // document.getElementById("date " + index).innerHTML  = cleanDate;
-        // document.getElementById("summary " + index).innerHTML  = cleanSummary;
+        document.querySelector(`#entry${index+1} > h2`).innerHTML = cleanTitle;
+        document.querySelector(`#entry${index+1} > h3`).innerHTML = cleanDate;
+        document.querySelector(`#entry${index+1} > p`).innerHTML = cleanSummary;
+
         box.close();
-       
     }
 }
 

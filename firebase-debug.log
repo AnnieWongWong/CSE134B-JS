@@ -1,0 +1,20 @@
+[debug] [2021-07-26T10:58:21.156Z] ----------------------------------------------------------------------
+[debug] [2021-07-26T10:58:21.158Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-07-26T10:58:21.158Z] CLI Version:   9.16.0
+[debug] [2021-07-26T10:58:21.158Z] Platform:      win32
+[debug] [2021-07-26T10:58:21.158Z] Node Version:  v14.15.5
+[debug] [2021-07-26T10:58:21.159Z] Time:          Mon Jul 26 2021 03:58:21 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-07-26T10:58:21.159Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-26T10:58:21.161Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-07-26T10:58:21.177Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-26T10:58:21.185Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:157:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async GoogleAuth.getClient (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:504:17)
+    at async GoogleAuth.getAccessToken (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:526:24)
+    at async autoAuth (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireAuth.js:24:19)
+    at async Object.requireAuth [as fn] (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireAuth.js:45:20)
+    at async C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to authenticate, have you run firebase login?
