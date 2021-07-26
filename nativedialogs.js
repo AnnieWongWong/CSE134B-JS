@@ -1,7 +1,5 @@
 window.addEventListener('DOMContentLoaded', init);
 
-let postList = [];
-
 function init() {
     document.getElementById('alert_button').addEventListener('click', send_alert);
     document.getElementById('confirm_button').addEventListener('click', send_confirmation);
@@ -14,8 +12,7 @@ function send_alert () {
 }
 
 function send_confirmation () {
-    let co;
-    co = confirm('Press confirm');
+    let co = confirm('Press confirm');
 
     document.querySelector('output').innerHTML = `The value returned by the confirm method is : ${co}`;
 }

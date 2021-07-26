@@ -15,6 +15,9 @@ function init() {
     document.getElementById('edit_post_save').addEventListener('click', edit_save_post);
     // document.getElementById('confirm_cancel').addEventListener('click', cancel_confirm);
     // document.getElementById('confirm_ok').addEventListener('click', cancel_ok);
+    readFromLocalStorage();
+    writeToLocalStorage();
+    deleteFromLocalStorage();
     detect_no_entries();
 }
 
@@ -25,14 +28,12 @@ function detect_no_entries() {
 }
 
 function show_add_post() {
-    let box;
-    box = document.getElementById('post_pop');
+    let box = document.getElementById('post_pop');
     box.showModal();
 }
 
 function cancel_post() {
-    let box;
-    box = document.getElementById('post_pop');
+    let box = document.getElementById('post_pop');
     box.close();
 }
 
@@ -65,17 +66,14 @@ function save_post() {
 
         let titleText = document.createElement('h2');
         titleText.textContent = cleanTitle;
-        titleText.id = `title${blogEntryCount}`;
         blogItem.appendChild(titleText);
 
         let dateText = document.createElement('h3');
         dateText.textContent = cleanDate;
-        dateText.id = `date${blogEntryCount}`;
         blogItem.appendChild(dateText);
 
         let summaryText = document.createElement('p');
         summaryText.textContent = cleanTitle;
-        summaryText.id = `summary${blogEntryCount}`;
         blogItem.appendChild(summaryText);
 
         let editBtn = document.createElement('button');
@@ -131,10 +129,8 @@ function editEntry() {
     document.getElementById('edit_year').value = blogEntryListDate[index];
     document.getElementById('edit_summary').value = blogEntryListSummary[index];
 
-    let box;
-    box = document.getElementById('edit_post_pop');
+    let box = document.getElementById('edit_post_pop');
     box.showModal();
-
 }
 
 function edit_save_post() {
@@ -164,7 +160,6 @@ function edit_save_post() {
 }
 
 function edit_cancel_post() {
-    let box;
-    box = document.getElementById('edit_post_pop');
+    let box = document.getElementById('edit_post_pop');
     box.close();
 }

@@ -12,46 +12,35 @@ function init() {
 }
 
 function send_alert2 () {
-    let box;
-    box = document.getElementById('alert_pop');
-    box.showModal();
+    document.getElementById('alert_pop').showModal();
 }
 
 function alertOk() {
-    let box;
-    box = document.getElementById('alert_pop');
-    box.close();
+    document.getElementById('alert_pop').close();
 }
 
 function send_confirm2 () {
-    let box;
-    box = document.getElementById('confirm_pop');
-    box.showModal();
+    document.getElementById('confirm_pop').showModal();
 }
 
 function confirmOk() {
-    let box;
-    box = document.getElementById('confirm_pop');
+    let box = document.getElementById('confirm_pop');
     document.getElementById('output2').textContent = 'The value returned by the confirm method is : true';
     box.close();
 }
 
 function confirmCancel() {
-    let box;
-    box = document.getElementById('confirm_pop');
+    let box = document.getElementById('confirm_pop');
     document.getElementById('output2').textContent = 'The value returned by the confirm method is : false';
     box.close();
 }
 
 function show_prompt2 () {
-    let box;
-    box = document.getElementById('prompt_pop');
-    box.showModal();
+    document.getElementById('prompt_pop').showModal();
 }
 
 function promptOk() {
-    let box;
-    box = document.getElementById('prompt_pop');
+    let box = document.getElementById('prompt_pop');
     let uname = document.getElementById('uname').value;
     
 
@@ -66,8 +55,7 @@ function promptOk() {
 }
 
 function promptCancel() {
-    let box;
-    box = document.getElementById('prompt_pop');
+    let box = document.getElementById('prompt_pop');
     document.querySelector('#prompttext2').innerHTML = `Prompt result : User didn't enter anything`;
     box.close();
 }
