@@ -3,61 +3,111 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="dist/purify.min.js"></script>
-        <title>Annie's Portfolio</title>
+        <script type="text/javascript" src="DOMPurify/dist/purify.min.js"></script>
+        <script type="text/javascript" src="nativedialogs.js"></script>
+        <script type="text/javascript" src="customdialog.js"></script>
+        <script type="module" src="blog.js"></script>
+        <title>HW4</title>
     </head>
     <body>
-        <header>
-
-        </header>
+        
         <main>
-            <!-- show a built in Alert -->
-            <button id="alert_button" type="button">Alert</button>
-            <!-- echo the value back to the web page by setting the
-             contents of an <output> tag to “The value returned by 
-            the confirm method is : (the value)”  -->
-            <button id="confirm_button" type="button">Confirm</button>
-            <!-- For the prompt buttons, you also will need to write a
-                 message like “User didn’t enter anything” in the negative
-                case (the user can always cancel instead of answering).
-                Use template strings to make this easier. -->
-            <button id="prompt" type="button">Prompt</button>
-            <!-- let clean = DOMPurify.sanitize( dirty , {USE_PROFILES: {html: true}} ); -->
-            <!-- The resulting HTML can be written into a DOM element using innerHTML or the DOM using document.write() -->
-            <button id="safer_prompt" type="button">Safer Prompt</button>
+            <header>
+                <h1>HW4</h1>
+            </header>
 
-            <script>
-                document.getElementById('alert_button').addEventListener('click', send_alert);
-                document.getElementById('confirm_button').addEventListener('click', send_confirmation);
+            <section>
+                <h1>Part 1</h1>
+                <button id="alert_button" type="button">Alert</button>
+                <button id="confirm_button" type="button">Confirm</button>
+                <button id="prompt" type="button">Prompt</button>
+                <button id="safer_prompt" type="button">Safer Prompt</button>
+                <hr>
+                <output></output>
+                <p id="prompttext"></p>
+            </section>
+            
+            <section>
+                <h1>Part 2</h1>
+                <button id="alert_button2" type="button">Alert</button>
+                <button id="confirm_button2" type="button">Confirm</button>
+                <button id="prompt2" type="button">Prompt</button>
+
+                <dialog id="alert_pop">
+                    <h2>Alert Pressed!</h2>
+                    <menu>
+                        <button id="alert_ok">Ok</button>
+                    </menu>
+                </dialog>
+
+                <dialog id="confirm_pop">
+                    <h2>Do you confirm this?</h2>
+                    <menu>
+                        <button id="confirm_cancel">Cancel</button>
+                        <button id="confirm_ok">Ok</button>
+                    </menu>
+                </dialog>
                 
-                function send_alert () {
-                    alert('loaded');
-                }
+                <dialog id="prompt_pop">
+                    <h2>What is your name?</h2>
+                    <input type="text" id="uname"></input>
+                    <menu>
+                        <button id="prompt_cancel">Cancel</button>
+                        <button id="prompt_ok">Ok</button>
+                    </menu>
+                </dialog>
+                <hr>
+                <output id="output2"></output>
+                <p id="prompttext2"></p>
+            </section>
 
+            <section>
+                <h1>Part 3</h1>
+                <h1>Blog</h1>
+                <ul id="postList"></ul>
+                <button id="addpost">Add post</button>
 
-                // echo the value back to the web page by setting the
-                // contents of an <output> tag to “The value returned by 
-                // the confirm method is : (the value)”
-                function send_confirmation () {
-                    let output_tag;
-                    let txt;
-                    let co;
-                    
-                    co = document.getElementById('confirm_button')
-                    output_tag = document.createElement('output');
-                    txt = document.createTextNode(`The value returned by the confirm method is : ${co.nodeValue}`)
-                    
-                    output_tag.appendChild(txt);
-                    document.body.appendChild(output_tag);
-                    // document.body.innerHTML += ''
-                }
+                <dialog id= "post_pop">
+                    <h2>Create Post</h2>
+                    <label>Title: </label>
+                    <input type="text" id="postTitle"></input>
+                    <br>
+                    <br>
+                    <label>Date: </label>
+                    <input type="date" id="year"></input>
+                    <br>
+                    <br>
+                    <label>Summary: </label>
+                    <textarea name="summary" rows="3" cols="25" id="summary"></textarea>
+                    <menu>
+                        <button id="post_cancel">Cancel</button>
+                        <button id="post_save">Save</button>
+                    </menu>
+                </dialog>
 
-            </script>
+                <dialog id= "edit_post_pop">
+                    <h2>Create Post</h2>
+                    <label>Title: </label>
+                    <input type="text" id="edit_postTitle"></input>
+                    <br>
+                    <br>
+                    <label>Date: </label>
+                    <input type="date" id="edit_year"></input>
+                    <br>
+                    <br>
+                    <label>Summary: </label>
+                    <textarea name="summary" rows="3" cols="25" id="edit_summary"></textarea>
+                    <menu>
+                        <button id="edit_post_cancel">Cancel</button>
+                        <button id="edit_post_save">Save</button>
+                    </menu>
+                </dialog>
+
+                <ul id="blogEntries"></ul>
+            </section>
             
         </main>
-        <footer>
 
-        </footer>
     </body>
     
 </html>
