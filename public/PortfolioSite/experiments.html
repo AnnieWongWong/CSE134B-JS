@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Annie's Experiments</title>
+        <style>
+            @font-face { font-family: Gotham-Light; src: url("fonts/GothamLight.ttf");}
+            @font-face { font-family: Gotham-Medium; src: url("fonts/GothamMedium.ttf");}
+            @font-face { font-family: Montserrat-Regular; src: url("fonts/Montserrat-Regular.ttf");}
+            @font-face { font-family: Raleway; src: url("fonts/Raleway-Medium.ttf");}
+            
+            :root {
+                --main-color: rgb(241, 158, 110);
+            }
+
+            html,
+            body {
+                background-color: rgb(250, 250, 250);
+                font-family: Montserrat-Regular, system-ui;
+                height: 100%;
+                text-align: center;
+                line-height: 1.5;
+            }  
+
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #navbar{
+                background-color: rgb(247,247,247);
+                font-family: Gotham-Light, system-ui;
+                list-style-type: none;
+                overflow: hidden;
+                border-bottom: 2px solid var(--main-color);
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            
+            li a {
+                display: block;           
+                background-color: black;
+                /* font-sizex: 18px; */
+                color: white;
+                padding: 15px 0px;
+                width: 20%;
+                text-decoration: none;
+                float: right;
+            }
+            
+            li a:hover {
+                background-color: rgb(252, 238, 225);
+                color: rgb(0, 0, 0);
+                transition: all .5s;
+            }
+
+            #active {
+                background-color: var(--main-color);
+                 color: white; 
+            }
+
+            #titles {
+                margin-top: 12px;
+                font-family: Gotham-Light, system-ui;
+            }
+           
+            section {
+                margin: 40px;
+                margin-top: 20px;
+            }
+
+            h1, h2, h3 {
+                font-family: Gotham-Medium, system-ui;
+            }
+
+            h2 {
+                width: 100%;
+                margin-bottom: 32px;
+                background-color: rgb(240, 181, 147);
+                border-radius: 10px;
+            }
+
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            footer {
+                background-color: rgb(34, 34, 34);
+                height: 55px;
+            }
+
+            .contactLinks {
+                margin-top: 16px;
+            }
+            
+            .contactSeparator {
+                display: inline;
+                color: white;
+            }
+
+            footer a {
+                color:rgb(255, 255, 255);
+            }
+
+            footer a:hover {
+                color: rgb(160, 160, 160);
+            }
+
+            hr {
+                border: 1px solid rgb(75, 75, 75);
+            }
+
+            .subHead {
+                margin : 20px;
+            }
+
+            section p {
+                margin-bottom: 10px;
+            }
+
+            #orderedList {
+                text-align: left;
+                display: table;
+                margin: 0 auto;
+            }
+
+            form {
+                text-align: left;
+                width: auto;
+            }
+
+            table {
+                margin-left: auto;
+                margin-right: auto;   
+                margin-bottom: 10px;
+                width: 50%;
+                
+            }
+
+            fieldset {
+                background-color: rgb(255, 240, 217);
+            }
+
+            #petForm {
+                margin: 1.5%
+            }
+        
+        </style>
+        <link rel="stylesheet" media="screen and (min-width: 1010px)" href="styles/wide.css" />
+        <link rel="stylesheet" media="screen and (max-width: 1009px)" href="styles/medium.css" />
+        <link rel="stylesheet" media="screen and (max-width: 766px)" href="styles/narrow.css" />
+    </head>
+    <body>
+        <header>
+            <nav>  
+                <ul id="navbar">
+                    <li id="navName"><p>Annie Wong</p></li>
+                    <li><a id="active" href="./experiments.html">Experiments</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            </nav>
+            <div id="banner2">
+                <div id="bannerContents">
+                    <h1 id="name">HTML Experiments</h1>
+                </div>
+            </div>
+            <p class="citation">Photo by and from <cite>Pexels</cite></p>
+            <hr>
+        </header>
+        <main> 
+            <section id="text">
+                <h2>Text Experiment</h2>
+                <h3>Journal Day 0</h3>
+                <p>I have decided to start journaling from today onwards. 
+                    Today is <b>Sunday 7/11/2021</b>. 
+                    I did nothing special <strong>today</strong> and I did 
+                    nothing special <strong>yesterday</strong>. I <em>also</em> expect 
+                    to do nothing special <strong>tomorrow</strong>.<br> 
+                    I did look up some really cool pictures of snowy terrain today.<br> I also 
+                    relearned some JavaScript today like <code>console.log()</code>, which just 
+                    logs things into the console. <br><br>
+                    And here is a nice haiku I found online: <br>
+                </p>
+                <pre>
+Winter by the pond
+Ice hangs from a craggy tree
+Where did the frogs go?
+                </pre>
+                <aside style="float:inline-end">Side note: Scotland has 421 different words for snow. <br>
+                Some of them are: <span><i>sneesl</i>, <i>feefle</i>, and <i>flinkdrinkin</i></span>
+                </aside>
+                
+            </section>
+            <hr>
+            <section id="orderedToDoListSection">
+                <h2>Ordered List Experiment</h2>
+                <div id="orderedList">
+                    <h3>To Do List</h3>
+                    <ol>
+                        <li>Look for an apartment</li>
+                        <li>Clean up Github repositories</li>
+                        <li>Apply for jobs</li>
+                        <li>Bake that cake</li>
+                    </ol>
+                </div>
+               
+            </section>
+            <hr>
+            <section id="picture">
+                <h2>Picture Tag Experiment</h2>
+                <h3>Here is a picture of a dog that is not mine</h3>
+                <p>There are 3 different dogs. A different one
+                    comes out depending on what size your browser screen is.
+                </p>
+                <picture>
+                    <source srcset="images/pexels-helena-lopes-2253275.jpg"
+                            media="(min-width: 800px)">
+                    <source srcset="images/pexels-josh-hild-2820134.jpg"
+                            media="(min-width: 700px)">
+                    <img src="images/pexels-lisa-791862.jpg" alt="smallerscreendog"  style="width: 60%; height: 60%;" />
+                </picture>
+                <p class="citation">Photo credits from smallest screen to largest: <cite>Lisa</cite>, <cite>Josh Hild</cite>, and <cite>Helena Lopes</cite> from <cite>Pexels</cite></p>
+            </section>
+            <hr>
+            <section id="iframe">
+                <h2>Inline Frame Experiment</h2>
+                <h3>An inline frame of the wikipedia article for dogs</h3>
+                <iframe id="inlineFrameExample"
+                    title="Wikipedia Article for Dogs"
+                    style="width: 70%; height: 400px;"
+                    src="https://en.wikipedia.org/wiki/Dog">
+                </iframe>
+            </section>
+            <hr>
+            <section id="audio">
+                <h2>Audio Experiment</h2>
+                <h3>Audio file of a kid saying "Hey, listen"</h3>
+                <audio controls loop>
+                    <source src="audio/squeak.ogg" type="audio/ogg">
+                </audio>
+            </section>
+            <hr>
+            <section id="video">
+                <h2>Video Experiment</h2>
+                <h3>Video</h3>
+                <p>This is a video from 2010 of me and my brother feeding geese</p>
+                <video style="width: 30%; height: 30%;" controls muted>
+                    <source src="videos/2010trim.mp4" type="video/mp4">
+                </video>
+            </section>
+            <hr>
+            <section id="canvasTest">
+                <h2>Canvas Experiment</h2>
+                <p>Here is a triangle next to a square</p>
+                <canvas id="canvas" width="200" height="120">
+                    <script>
+                        var c = document.getElementById("canvas");
+                        var ctx = c.getContext("2d");
+
+                        ctx.beginPath();
+                        ctx.arc(150, 60, 40, 0, 2 * Math.PI);;
+                        ctx.moveTo(25,25);
+                        ctx.lineTo(105,25);
+                        ctx.lineTo(25,105);
+                        ctx.fill();
+                    </script>
+                </canvas>
+            </section>
+            <hr>
+            <section id="svgTest">
+                <h2>SVG Experiment</h2>
+                <p>Here is a rectangle</p>
+                <svg width="170" height="100">
+                    <rect width="170" height="100" />
+                </svg>
+            </section>
+            <hr>
+            <section>
+                <h2>Form Experiment</h2>
+                <h3>Pet Adoption Form</h3>
+                <form>
+                    <fieldset>
+                            <legend style="margin-left: 1.5%;">Pet Adoption Form</legend>
+                        <div id="petForm">
+                            <label for="fname">Full name:</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                            <label for="income">Income Range:</label><br>
+                            <input list="incomeOptions" name="income" id="income">
+                            <datalist id="incomeOptions">
+                                <option value="&lt; $50,000">
+                                <option value="$50,000 - $80,000">
+                                <option value="$80,000 - $100,000">
+                                <option value="$100,000 - $120,000">
+                                <option value="&gt; $120,000">
+                            </datalist><br>
+                            <label for="pets">Choose a dog/cat:</label><br>
+                            <select name="pets" id="pets">
+                                <optgroup label="Dogs">
+                                    <option value="Samoyed">Samoyed</option>
+                                    <option value="GermanShepherd">German Shepherd</option>
+                                </optgroup>
+                                <optgroup label="Cats">
+                                    <option value="MaineCoon">Maine Coon</option>
+                                    <option value="ScottishFold">Scottish Fold</option>
+                                </optgroup>
+                            </select><br>
+                            
+                            <label for="whyPetAdoption">Why do you think you would be a good pet owner?</label><br>
+                            <textarea id="whyPetAdoption" name="whyPetAdoption" rows="4" cols="30">
+                            </textarea>
+                            <details>
+                                <summary>Disclaimer</summary>
+                                <p>You will not actually get a dog or cat from submitting this form.</p>
+                            </details>
+                            <br><br>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <hr>
+            <section>
+                <h2>Template Experiment</h2>
+                <h3> Here is a Samoyed dog that you cannot see, because it is hidden by the template tag</h3>
+                <template id="SamoyedDog"> 
+                    <img src="images/pexels-ilmārs-erdmanis-6623995.jpg" alt="dog7" style="width:50%; height: 50%;">
+                </template>
+                <p class="citation">Photo by <cite>Ilmārs Erdmanis </cite> from <cite>Pexels</cite></p>
+                </section>
+            <hr>
+            <section>
+                <h2>Table Experiment</h2>
+                <table>
+                    <caption>Available dogs at the local adoption center</caption>
+                    <colgroup>
+                        <col style="background-color:rgb(255, 206, 161)">
+                        <col style="background-color:rgb(223, 223, 223)">
+                        <col style="background-color:rgb(184, 255, 189)">
+                    </colgroup>
+                    <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Type</th>
+                    </tr>
+                    <tr>
+                      <td>Croissant</td>
+                      <td>2</td>
+                      <td>Pomeranian</td>
+                    </tr>
+                    <tr>
+                      <td>Cola</td>
+                      <td>4</td>
+                      <td>Bulldog</td>
+                    </tr>
+                    <tr>
+                        <td>Nugget</td>
+                        <td>5</td>
+                        <td>Chow Chow</td>
+                      </tr>
+                  </table>
+                  <figure>
+                    <img src="images/pexels-sharmaine-monticalbo-4083564.jpg" alt="Nugget" style="width:50%; height: 50%;">
+                    <figcaption>Fig.1 Nugget the 5 year old Chow Chow</figcaption>
+                   
+                  </figure>
+                  <p class="citation">Photo by <cite>Sharmaine Monticalbo</cite> from <cite>Pexels</cite></p>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <div class="contactLinks">
+                <a href="https://github.com/AnnieWongWong">GitHub</a>
+                <p class="contactSeparator">|</p>
+                <a href="https://www.linkedin.com/in/awon/">LinkedIn</a>
+                <p class="contactSeparator">| Email: </p>
+                <a href="mailto:anw104@ucsd.edu"> anw104@ucsd.edu</a>
+            </div>
+        </footer>
+    </body>
+</html>

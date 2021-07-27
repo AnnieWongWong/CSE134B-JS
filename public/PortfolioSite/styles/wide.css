@@ -1,0 +1,100 @@
+#banner {
+    background-color: var(--main-color);
+    background-image: url(../images/pexels-photo-302905.jpeg);
+    height: 600px;
+    background-position-y: 77%;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 5px;
+}
+
+#banner2 {
+    background-color: var(--main-color);
+    background-image: url(../images/pexels-janko-ferlic-590493.jpg);
+    height: 600px;
+    background-position-y: 77%;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 5px;
+}
+
+
+#bannerContents {
+    text-align: center;
+    color: white;
+}
+
+#projectContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 70px;
+    grid-column-gap: 30px;
+    align-items: start;
+    grid-auto-rows: minmax(400px, auto);
+}
+
+#PROJECTS {
+    margin: 50px 100px 40px 100px
+}
+
+#experienceContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 70px;
+    grid-column-gap: 30px;
+    align-items: start;
+    grid-auto-rows: minmax(400px, auto);
+}
+
+#EXPERIENCE {
+    margin: 50px 100px 40px 100px
+}
+
+#navName {
+    display: block;      
+    font-size: 23px;     
+    padding: 11px 0px;
+    width: auto;
+    margin-left: 25px;
+    float: left;
+    font-family: Gotham-Medium, system-ui;
+}
+
+li a {
+    display: block;           
+    background-color: rgb(0, 0, 0);
+    font-size: 18px;
+    color: white;
+    padding: 15px 0px;
+    width: 20%;
+    text-decoration: none;
+    float: right;
+}
+
+#name {
+    font-size: 2.5vw;
+}
+
+#titles {
+    font-size: 1.4vw;
+}
+
+#contactMeButton {
+    font-size: 1.15vw;
+}
+
+#ABOUTME {
+    font-size: 1.3em;
+}
+
+ul li {
+    line-height: 1.5;
+}

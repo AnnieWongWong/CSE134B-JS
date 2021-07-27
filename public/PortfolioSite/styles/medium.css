@@ -1,0 +1,91 @@
+#banner {
+    background-color: var(--main-color);
+    background-image: url(../images/pexels-photo-302905.jpeg);
+    height: 500px;
+    background-position-y: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    color: white;
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 5px;
+}
+
+#banner2 {
+    background-color: var(--main-color);
+    background-image: url(../images/pexels-janko-ferlic-590493.jpg);
+    height: 600px;
+    background-position-y: 77%;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 5px;
+}
+
+#bannerContents {
+    text-align: center;
+    color: white;
+}
+
+#projectContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 70px;
+    grid-column-gap: 20px;
+    align-items: start;
+    grid-auto-rows: minmax(400px, auto);
+}
+
+#navName {
+    display: block;      
+    font-size: 4vw;     
+    padding: 11px 0px;
+    margin-left: 25px;
+    float: left;
+    font-family: Gotham-Medium, system-ui;
+}
+
+li a {
+    display: block;           
+    background-color: rgb(0, 0, 0);
+    font-size: 4vw;
+    color: white;
+    padding: 15px 0px;
+    width: 35%;
+    text-decoration: none;
+    float: right;
+}
+
+#name {
+    font-size: 2.3em;
+}
+
+#titles {
+    font-size: 1.1em;
+}
+
+#contactMeButton {
+    font-size: 1.1em;
+}
+
+.bannerCitation {
+    font-size: 1.8vw;
+}
+
+#ABOUTME {
+    font-size: 1em;
+}
+
+ul li {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.contactLinks {
+    font-size: .9em;
+}

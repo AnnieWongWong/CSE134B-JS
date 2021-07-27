@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="DOMPurify/dist/purify.min.js"></script>
+        <script type="text/javascript" src="nativedialogs.js"></script>
+        <script type="text/javascript" src="customdialog.js"></script>
+        <title>HW4</title>
+    </head>
+    <body>
+        
+        <main>
+            <header>
+                <h1>HW4</h1>
+            </header>
+
+            <!-- hw4 part 1 -->
+            <section>
+                <h1>Part 1</h1>
+                <button id="alert_button" type="button">Alert</button>
+                <button id="confirm_button" type="button">Confirm</button>
+                <button id="prompt" type="button">Prompt</button>
+                <button id="safer_prompt" type="button">Safer Prompt</button>
+                <hr>
+                <output></output>
+                <p id="prompttext"></p>
+            </section>
+            
+            <!-- hw4 part 2 -->
+            <section>
+                <h1>Part 2</h1>
+                <button id="alert_button2" type="button">Alert</button>
+                <button id="confirm_button2" type="button">Confirm</button>
+                <button id="prompt2" type="button">Prompt</button>
+
+                <dialog id="alert_pop">
+                    <h2>Alert Pressed!</h2>
+                    <menu>
+                        <button id="alert_ok">Ok</button>
+                    </menu>
+                </dialog>
+
+                <dialog id="confirm_pop">
+                    <h2>Do you confirm this?</h2>
+                    <menu>
+                        <button id="confirm_cancel">Cancel</button>
+                        <button id="confirm_ok">Ok</button>
+                    </menu>
+                </dialog>
+                
+                <dialog id="prompt_pop">
+                    <h2>What is your name?</h2>
+                    <input type="text" id="uname"></input>
+                    <menu>
+                        <button id="prompt_cancel">Cancel</button>
+                        <button id="prompt_ok">Ok</button>
+                    </menu>
+                </dialog>
+                <hr>
+                <output id="output2"></output>
+                <p id="prompttext2"></p>
+            </section>
+
+        </main>
+
+    </body>
+    
+</html>

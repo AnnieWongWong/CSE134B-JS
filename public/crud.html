@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="DOMPurify/dist/purify.min.js"></script>
+        <script type="module" src="blog.js"></script>
+        <title>Annie's Blog</title>
+    </head>
+    <body>
+        
+        <main>
+            <header>
+                <h1>Blog for blogging bloggers </h1>
+            </header>
+                <button id="addpost">Add Post</button>
+                <!-- Notification to be shown when no entries exist -->
+                <p id="noEntries">There are currently no blog entries</p>
+
+                <!-- Modal to be shown when adding a new a blog entry -->
+                <dialog id= "post_pop">
+                    <h2>Create Post</h2>
+                    <label>Title: </label>
+                    <input type="text" id="postTitle"></input>
+                    <br>
+                    <br>
+                    <label>Date: </label>
+                    <input type="date" id="year"></input>
+                    <br>
+                    <br>
+                    <label>Summary: </label>
+                    <textarea name="summary" rows="4" cols="25" id="summary"></textarea>
+                    <menu>
+                        <button id="post_cancel">Cancel</button>
+                        <button id="post_save">Save</button>
+                    </menu>
+                </dialog>
+
+                <!-- Modal to be shown when editing a blog entry -->
+                <dialog id= "edit_post_pop">
+                    <h2>Create Post</h2>
+                    <label>Title: </label>
+                    <input type="text" id="edit_postTitle"></input>
+                    <br>
+                    <br>
+                    <label>Date: </label>
+                    <input type="date" id="edit_year"></input>
+                    <br>
+                    <br>
+                    <label>Summary: </label>
+                    <textarea name="summary" rows="4" cols="25" id="edit_summary"></textarea>
+                    <menu>
+                        <button id="edit_post_cancel">Cancel</button>
+                        <button id="edit_post_save">Save</button>
+                    </menu>
+                </dialog>
+
+                <!-- List to be populated with blog entries -->
+                <ul id="blogEntries"></ul>
+            
+        </main>
+    </body>
+</html>

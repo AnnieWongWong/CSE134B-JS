@@ -1,20 +1,14 @@
-[debug] [2021-07-26T10:58:21.156Z] ----------------------------------------------------------------------
-[debug] [2021-07-26T10:58:21.158Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2021-07-26T10:58:21.158Z] CLI Version:   9.16.0
-[debug] [2021-07-26T10:58:21.158Z] Platform:      win32
-[debug] [2021-07-26T10:58:21.158Z] Node Version:  v14.15.5
-[debug] [2021-07-26T10:58:21.159Z] Time:          Mon Jul 26 2021 03:58:21 GMT-0700 (Pacific Daylight Time)
-[debug] [2021-07-26T10:58:21.159Z] ----------------------------------------------------------------------
+[debug] [2021-07-27T10:30:24.580Z] ----------------------------------------------------------------------
+[debug] [2021-07-27T10:30:24.582Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Annie Wong\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2021-07-27T10:30:24.582Z] CLI Version:   9.14.0
+[debug] [2021-07-27T10:30:24.582Z] Platform:      win32
+[debug] [2021-07-27T10:30:24.582Z] Node Version:  v14.16.0
+[debug] [2021-07-27T10:30:24.591Z] Time:          Tue Jul 27 2021 03:30:24 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-07-27T10:30:24.591Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2021-07-26T10:58:21.161Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2021-07-26T10:58:21.177Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2021-07-26T10:58:21.185Z] Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
-    at GoogleAuth.getApplicationDefaultAsync (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:157:19)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async GoogleAuth.getClient (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:504:17)
-    at async GoogleAuth.getAccessToken (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\google-auth-library\build\src\auth\googleauth.js:526:24)
-    at async autoAuth (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireAuth.js:24:19)
-    at async Object.requireAuth [as fn] (C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireAuth.js:45:20)
-    at async C:\Users\annie\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
-[error] 
-[error] Error: Failed to authenticate, have you run firebase login?
+[debug] [2021-07-27T10:30:24.603Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-27T10:30:24.603Z] > authorizing via signed-in user (anw104@ucsd.edu)
+[debug] [2021-07-27T10:30:24.604Z] [iam] checking project cse110firebase-76312 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-07-27T10:30:24.609Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-27T10:30:24.609Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

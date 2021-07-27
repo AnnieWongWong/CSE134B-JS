@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Annie's Portfolio</title>
+
+        <style>
+            @font-face { font-family: Gotham-Light; src: url("fonts/GothamLight.ttf");}
+            @font-face { font-family: Gotham-Medium; src: url("fonts/GothamMedium.ttf");}
+            @font-face { font-family: Montserrat-Regular; src: url("fonts/Montserrat-Regular.ttf");}
+            @font-face { font-family: Raleway; src: url("fonts/Raleway-Medium.ttf");}
+            
+            :root {
+                --main-color: rgb(241, 158, 110);
+            }
+
+            html,
+            body {
+                background-color: rgb(250, 250, 250);
+                font-family: Montserrat-Regular, system-ui;
+                height: 100%;
+                text-align: center;
+                margin: ;
+            }  
+
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body {
+                padding-top: 65px;;
+            }
+
+
+            #active {
+                background-color: var(--main-color);
+                 color: white; 
+            }
+
+            #titles {
+                margin-top: 12px;
+                font-family: Gotham-Light, system-ui;
+                /* font-size: 20px; */
+            }
+
+            #contactBtnContainer {
+                display:flex;
+                justify-content:center;
+            }
+
+            #contactMeButton {
+                display:inline-block;
+                background-color: rgba(255,255,255,.2);
+                color: white;
+                text-decoration: none;
+                margin-top: 25px;
+                padding: 10px 20px;
+                /* font-size: 18px; */
+                border-top-right-radius: 12px;
+                border-bottom-left-radius: 12px;
+                border: 4px solid rgb(255, 255, 255);
+                transition: all .5s;
+                font-family: Raleway, system-ui;
+            } 
+
+            #contactMeButton:hover {
+                border-color: rgba(255, 255, 255, 0.8);
+                color: rgb(0, 0, 0);
+                background-color: rgba(255, 255, 255, 1);
+            }
+
+            section {
+                margin: 40px;
+                margin-top: 20px;
+            }
+
+            h1, h2, h3 {
+                font-family: Gotham-Medium, system-ui;
+            }
+
+            h2 {
+                width: 100%;
+                margin-bottom: 32px;
+                background-color: rgb(240, 181, 147);
+                border-radius: 10px;
+            }
+
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            .topic {
+                /* font-size: 17px; */
+                margin-bottom: 12px;
+            }
+
+            #EXPERIENCE ul {
+                margin-top: 25px;
+            }
+
+            section ul {
+                text-align: left;
+                display: table;
+                margin: 0 auto;
+                line-height: 22px;
+            }
+            
+            ul {
+                width: 75%; 
+            }
+
+            #skillList {
+                margin-left: 30px;
+                margin-top: -15px;
+                -moz-column-count: 1;
+                -moz-column-gap: 20px;
+                -webkit-column-count: 1;
+                -webkit-column-gap: 20px;
+                column-count: 1;
+                column-gap: 20px;   
+            }
+
+            footer {
+                background-color: rgb(34, 34, 34);
+                height: 55px;
+            }
+
+            .contactLinks {
+                margin-top: 16px;
+            }
+            
+            .contactSeparator {
+                display: inline;
+                color: white;
+            }
+
+            footer a {
+                color:rgb(255, 255, 255);
+            }
+
+            footer a:hover {
+                color: rgb(160, 160, 160);
+            }
+
+            hr {
+                border: 1px solid rgb(75, 75, 75);
+            }
+
+            .subHead {
+                margin : 20px;
+            }
+
+        </style>
+        <link rel="stylesheet" media="screen and (min-width: 1010px)" href="styles/wide.css" />
+        <link rel="stylesheet" media="screen and (max-width: 1009px)" href="styles/medium.css" />
+        <link rel="stylesheet" media="screen and (max-width: 766px)" href="styles/narrow.css" />
+        <script>
+            console.log('TESTING');
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>  
+                <ul id="navbar">
+                    <li id="navName"><p>Annie Wong</p></li>
+                    <li><a href="./experiments.html">Experiments</a></li>
+                    <li><a id="active" href="./index.html">Home</a></li>
+                </ul>
+            </nav>
+
+            <div id="banner">
+                <div id="bannerContents">
+                    <h1 id="name">ANNIE WONG</h1>
+                    <p id="titles">Computer Science B.S. - University of California, San Diego</p>
+                    <div id="contactBtnContainer">
+                        <a id="contactMeButton" href="mailto:anw104@ucsd.edu">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            <p class="citation">Photo by <cite>Chevanon Photography </cite> from <cite>Pexels</cite></p>
+        </header>
+        <hr>
+        <main>
+            <div class="subHead"><h2>ABOUT ME</h2></div>
+            <section id="ABOUTME">
+                <p>Hello! I am an undergraduate student at UC San Diego pursuing a degree in computer science with a 
+                    minor in economics. I love the process of planning, designing, and building software and algorithms 
+                    and I am excited to gain new skills and experiences that will aid me on my quest to build better 
+                    algorithms and programs!
+                    <br>
+                </p>
+            </section>
+
+            <hr> 
+
+            <div class="subHead"><h2>EXPERIENCE</h2></div>
+            <section id="EXPERIENCE">
+                <div id="experienceContainer">
+                    <div id=experienceItem1>
+                        <h3>UC San Diego Computer Science Department</h3>
+                        <p class="topic">Research Assistant <b>|</b> Sept 2019 - Jun 2020</p>
+                        <!-- <img src="images/ocrchart.png" alt="ocrFlowChart" width="30%" height="30%"> -->
+                        <img src="images/dhSegmentFlowChart.png" alt="dhSegmentFlowChart" style="width:77%; height:77%">
+                        <!-- <img src="images/performanceEval.png" alt="performanceEval" width="30%" height="30%"> -->
+                        <ul>
+                            <li>In a team of four, performed research on improving text line segmentation for optical character recognition (OCR) on machine-printed historical documents.</li>
+                            <li>Built text line segmentation algorithms for historical documents using histogram projection and connected component analysis.</li>
+                            <li>Implemented a convolutional neural network (dhSegment) for page layout analysis and text line segmentation.</li>
+                            <li>Other contributions include: literature searching, proposal writing, and project management.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr>   
+
+            <div class="subHead"><h2>PROJECTS</h2></div>
+            <section id="PROJECTS">
+                <div id="projectContainer">
+                    <div class="projectItem1">
+                        <img src="images/TimeQuilt.png" alt="TimeQuiltScrens" style="width:77%; height:77%">
+                        <h3>WIC Winter Dev Projects - TimeQuilt</h3>
+                        <p class="topic">Mobile Application</p>
+                        <ul>
+                            <li>3rd place winner out of 8 teams in WIC's Winter 2020 Winter Dev Projects.</li>
+                            <li>In a team of 5, developed a mobile application for journaling and tracking events that occur throughout the week.</li>
+                            <li>Contributions include: front end interface implementation, app navigation implementation, back end debugging, and document preparation.</li>
+                            <li><b>Tools and technologies used:</b> Node.js, React Native, Expo, Firebase, Figma, Lucidchart, JavaScript, HTML/CSS.</li>
+                        </ul>
+                    </div>
+
+                    <div class="projectItem2">
+                        <img src="images/cocial.png" alt="cocialScreens" style="width:77%; height:77%">
+                        <h3>ACM Side Projects - Cocial</h3>
+                        <p class="topic">Mobile Application</p>
+                        <ul>
+                            <li>In a team of 6, developed a mobile application dedicated to helping individuals and groups organize gatherings and events.</li>
+                            <li>Contributions include: front end interface implementation, app navigation implementation, and integration of front end with back end.</li>
+                            <li><b>Tools and technologies used:</b> Node.js, React Native, Expo, MongoDB, Figma, Lucidchart, TypeScript, HTML/CSS.</li>
+                        </ul>
+                    </div>
+                    <div class="projectItem3">
+                        <img src="images/GaryisWinLogo.png" alt="GaryIsWinLogo" style="width:60%; height:60%">
+                        <h3>GaryIsWin</h3>
+                        <p class="topic">Mobile Application / Game</p>
+                        <ul>
+                            <li>In a team of 10, developed a mobile game inspired by award-winning puzzle game Baba Is You.</li>
+                            <li>Contributed to implementation of game mechanics and project documentation/management.</li>
+                            <li>Utilized Agile strategies to promote steady production.</li>
+                        </ul>
+                    </div>
+
+                    <div class="projectItem4">
+                        <img src="images/commandShell.png" alt="commandShellLogo" style="width:40%; height:40%">
+                        <h3>RShell</h3>
+                        <p class="topic">Unix Shell / Command Line Interface - C++</p>
+                        <ul>
+                            <li>Programmed a composite pattern based program to support UNIX commands, I/O redirection, and operator precedence.</li>
+                            <li>Developed unit and integration tests using Google Test framework to assess program functionality.</li>
+                            <li>Utilized Agile strategies and stand-up meetings to promote steady production.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr> 
+            <div class="subHead"><h2>SKILLS</h2></div>
+            <section id="SKILLS">
+                <ul id="skillList">
+                    <li><b>Languages:</b> C/C++, Java, Python, HTML/CSS, SQL</li>
+                    <li><b>Technologies:</b> Git, NodeJS, React Native</li>
+                    <li><b>Tools:</b> Figma, VS Code</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <hr>
+            <div class="contactLinks">
+                <a href="https://github.com/AnnieWongWong">GitHub</a>
+                <p class="contactSeparator">|</p>
+                <a href="https://www.linkedin.com/in/awon/">LinkedIn</a>
+                <p class="contactSeparator">| Email: </p>
+                <a href="mailto:anw104@ucsd.edu"> anw104@ucsd.edu</a>
+            </div>
+        </footer>
+    </body>
+</html>

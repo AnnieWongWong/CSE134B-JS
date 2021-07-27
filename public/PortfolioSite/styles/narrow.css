@@ -1,0 +1,69 @@
+#banner {
+    background-color: var(--main-color);
+    background-image: url(../images/pexels-photo-302905.jpeg);
+    height: 600px;
+    background-position-x: -340px;
+    background-position-y: 70%;
+    background-size: 1187px, 791px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    color: white;
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 5px;
+}
+
+#banner2 {
+    background-color: var(--main-color);
+    background-image: url(../images/pexels-janko-ferlic-590493.jpg);
+    height: 600px;
+    background-position-y: 77%;
+    background-size: 1187px, 791px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 5px;
+}
+
+#bannerContents {
+    text-align: center;
+    color: white;
+}
+
+#projectContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 70px;
+    grid-column-gap: 20px;
+    align-items: start;
+    grid-auto-rows: minmax(400px, auto);
+}
+
+#PROJECTS {
+    margin: 3%;
+    margin-bottom: 5%;
+}
+
+#navName {
+    display: block;      
+    font-size: 21px;     
+    padding: 13px 0px;
+    width: auto;
+    margin-left: 25px;
+    float: left;
+    font-family: Gotham-Medium, system-ui;
+}
+
+li a {
+    display: block;           
+    background-color: black;
+    font-size: 18px;
+    color: white;
+    padding: 15px 0px;
+    width: 27%;
+    text-decoration: none;
+    float: right;
+}
