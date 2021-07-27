@@ -1,3 +1,4 @@
-I tried changing the sizing and images, but I ended up liking what I had originally more. 
-
-padding between navbar and header
+- Added padding between navbar and large banner, because the navbar was blocking part of the banner.
+- Resized some elements
+- Cleaned up css 
+- Added comments to files

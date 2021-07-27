@@ -1,3 +1,7 @@
+body {
+    padding-top: 55px;
+}
+
 #banner {
     background-color: var(--main-color);
     background-image: url(../images/pexels-photo-302905.jpeg);
@@ -92,7 +96,7 @@ li a {
 }
 
 #ABOUTME {
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 ul li {

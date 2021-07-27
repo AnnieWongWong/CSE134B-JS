@@ -1,3 +1,7 @@
+body {
+    padding-top: 58px;
+}
+
 #banner {
     background-color: var(--main-color);
     background-image: url(../images/pexels-photo-302905.jpeg);

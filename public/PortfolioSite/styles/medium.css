@@ -1,3 +1,7 @@
+body {
+    padding-top: 55px;
+}
+
 #banner {
     background-color: var(--main-color);
     background-image: url(../images/pexels-photo-302905.jpeg);
@@ -43,7 +47,7 @@
 
 #navName {
     display: block;      
-    font-size: 4vw;     
+    font-size: 20px;     
     padding: 11px 0px;
     margin-left: 25px;
     float: left;
@@ -53,7 +57,7 @@
 li a {
     display: block;           
     background-color: rgb(0, 0, 0);
-    font-size: 4vw;
+    font-size: 2vw;
     color: white;
     padding: 15px 0px;
     width: 35%;

@@ -15,6 +15,11 @@
                 --main-color: rgb(241, 158, 110);
             }
 
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            
             html,
             body {
                 background-color: rgb(250, 250, 250);
@@ -23,9 +28,26 @@
                 text-align: center;
             }  
 
-            * {
-                margin: 0px;
-                padding: 0px;
+            h1, h2, h3 {
+                font-family: Gotham-Medium, system-ui;
+            }
+
+            h2 {
+                width: 100%;
+                margin-bottom: 32px;
+                background-color: rgb(240, 181, 147);
+                border-radius: 10px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            hr {
+                border: 1px solid rgb(75, 75, 75);
             }
 
             #navbar{
@@ -42,7 +64,6 @@
             li a {
                 display: block;           
                 background-color: black;
-                /* font-sizex: 18px; */
                 color: white;
                 padding: 15px 0px;
                 width: 20%;
@@ -53,9 +74,10 @@
             li a:hover {
                 background-color: rgb(252, 238, 225);
                 color: rgb(0, 0, 0);
-                transition: all .5s;
+                transition: all .3s;
             }
 
+            /* Highlights the nav button for the active page */
             #active {
                 background-color: var(--main-color);
                  color: white; 
@@ -64,7 +86,6 @@
             #titles {
                 margin-top: 12px;
                 font-family: Gotham-Light, system-ui;
-                /* font-size: 20px; */
             }
 
             #contactBtnContainer {
@@ -79,18 +100,16 @@
                 text-decoration: none;
                 margin-top: 25px;
                 padding: 10px 20px;
-                /* font-size: 18px; */
                 border-top-right-radius: 12px;
                 border-bottom-left-radius: 12px;
                 border: 4px solid rgb(255, 255, 255);
-                transition: all .5s;
+                transition: all .2s;
                 font-family: Raleway, system-ui;
             } 
 
             #contactMeButton:hover {
-                border-color: rgba(255, 255, 255, 0.8);
-                color: rgb(0, 0, 0);
                 background-color: rgba(255, 255, 255, 1);
+                color: rgb(0, 0, 0);
             }
 
             section {
@@ -98,24 +117,11 @@
                 margin-top: 20px;
             }
 
-            h1, h2, h3 {
-                font-family: Gotham-Medium, system-ui;
-            }
-
-            h2 {
-                width: 100%;
-                margin-bottom: 32px;
-                background-color: rgb(240, 181, 147);
-                border-radius: 10px;
-            }
-
-            h3 {
-                margin-top: 20px;
-                margin-bottom: 10px;
+            .subHead {
+                margin : 20px;
             }
 
             .topic {
-                /* font-size: 17px; */
                 margin-bottom: 12px;
             }
 
@@ -150,6 +156,15 @@
                 height: 55px;
             }
 
+            footer a {
+                color:rgb(255, 255, 255);
+            }
+
+            footer a:hover {
+                color: rgb(160, 160, 160);
+            }
+
+
             .contactLinks {
                 margin-top: 16px;
             }
@@ -159,40 +174,29 @@
                 color: white;
             }
 
-            footer a {
-                color:rgb(255, 255, 255);
-            }
-
-            footer a:hover {
-                color: rgb(160, 160, 160);
-            }
-
-            hr {
-                border: 1px solid rgb(75, 75, 75);
-            }
-
-            .subHead {
-                margin : 20px;
-            }
-
         </style>
         <link rel="stylesheet" media="screen and (min-width: 1010px)" href="styles/wide.css" />
         <link rel="stylesheet" media="screen and (max-width: 1009px)" href="styles/medium.css" />
         <link rel="stylesheet" media="screen and (max-width: 766px)" href="styles/narrow.css" />
-        <script>
-            console.log('TESTING');
-        </script>
     </head>
     <body>
         <header>
+
             <nav>  
-                <ul id="navbar">
-                    <li id="navName"><p>Annie Wong</p></li>
-                    <li><a href="./experiments.html">Experiments</a></li>
-                    <li><a id="active" href="./index.html">Home</a></li>
-                </ul>
+                <!-- <div id=hamburgMenu>
+                    <input type="checkbox" /> -->
+                    <!-- <span></span>
+                    <span></span>
+                    <span></span> -->
+                    <ul id="navbar">
+                        <li id="navName"><p>Annie Wong</p></li>
+                        <li><a href="./experiments.html">Experiments</a></li>
+                        <li><a id="active" href="./index.html">Home</a></li>
+                    </ul>
+                <!-- </div>  -->
             </nav>
 
+            <!-- Site Banner -->
             <div id="banner">
                 <div id="bannerContents">
                     <h1 id="name">ANNIE WONG</h1>
@@ -203,9 +207,11 @@
                 </div>
             </div>
             <p class="citation">Photo by <cite>Chevanon Photography </cite> from <cite>Pexels</cite></p>
+
         </header>
         <hr>
         <main>
+            <!-- About me section -->
             <div class="subHead"><h2>ABOUT ME</h2></div>
             <section id="ABOUTME">
                 <p>Hello! I am an undergraduate student at UC San Diego pursuing a degree in computer science with a 
@@ -218,6 +224,7 @@
 
             <hr> 
 
+            <!-- Experience Section -->
             <div class="subHead"><h2>EXPERIENCE</h2></div>
             <section id="EXPERIENCE">
                 <div id="experienceContainer">
@@ -239,6 +246,7 @@
 
             <hr>   
 
+            <!-- Projects Section -->
             <div class="subHead"><h2>PROJECTS</h2></div>
             <section id="PROJECTS">
                 <div id="projectContainer">
@@ -288,6 +296,7 @@
                 </div>
             </section>
             <hr> 
+            <!-- Skills Section -->
             <div class="subHead"><h2>SKILLS</h2></div>
             <section id="SKILLS">
                 <ul id="skillList">
