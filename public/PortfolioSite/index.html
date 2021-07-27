@@ -21,7 +21,6 @@
                 font-family: Montserrat-Regular, system-ui;
                 height: 100%;
                 text-align: center;
-                margin: ;
             }  
 
             * {
@@ -29,10 +28,33 @@
                 padding: 0px;
             }
 
-            body {
-                padding-top: 65px;;
+            #navbar{
+                background-color: rgb(247,247,247);
+                font-family: Gotham-Light, system-ui;
+                list-style-type: none;
+                overflow: hidden;
+                border-bottom: 2px solid var(--main-color);
+                position: fixed;
+                top: 0;
+                width: 100%;
             }
-
+            
+            li a {
+                display: block;           
+                background-color: black;
+                /* font-sizex: 18px; */
+                color: white;
+                padding: 15px 0px;
+                width: 20%;
+                text-decoration: none;
+                float: right;
+            }
+            
+            li a:hover {
+                background-color: rgb(252, 238, 225);
+                color: rgb(0, 0, 0);
+                transition: all .5s;
+            }
 
             #active {
                 background-color: var(--main-color);
