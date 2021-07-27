@@ -12,7 +12,7 @@
             :root {
                 --bkg-color: rgb(251,249,244);
                 --long-hr-color:  rgb(226,73,71);
-                --short-hr-color:  rgb(71, 1, 1);
+                --short-hr-color:  rgb(204, 29, 29);
                 --add-post-color: rgb(226, 87, 84)
             }
 
@@ -55,12 +55,6 @@
                 cursor: pointer;
                 margin: 25px;
             }
-
-            #addpost:hover {
-                background-color: var(--add-post-color);
-                color: white;
-            }
-
             
             /* From  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr*/
            .smallerLine {
@@ -113,15 +107,43 @@
                 cursor: pointer;
             }
 
-            li button:hover {
-                background-color: var(--add-post-color);
-                color: white;
-            }
 
             #noEntries {
                 text-align: center;
             }
 
+            dialog {
+                border-radius: 20px;
+                border-color: var(--add-post-color);
+                color: var(--add-post-color);
+                background-color: white;
+                width: 420px;   
+                text-align: center;
+            }
+
+            dialog button {
+                background-color: white; 
+                color: var(--add-post-color); 
+                border-radius: 10px;
+                border: 2px solid var(--add-post-color);
+                width: 150px;
+                padding: 13px 0px;
+                font-size: 16px;
+                transition-duration: 0.1s;
+                cursor: pointer;
+                margin-top: 10px;
+                margin-right: 25px;
+            }
+
+            button:hover {
+                background-color: var(--add-post-color);
+                color: white;
+            }
+            
+            #addpost:hover {
+                background-color: var(--add-post-color);
+                color: white;
+            }
         </style>
         <title>The Bloggers</title>
     </head>
@@ -150,18 +172,21 @@
                 <dialog id= "post_pop">
                     <h2>Create Post</h2>
                     <label>Title: </label>
+                    <br>
                     <input type="text" id="postTitle"></input>
                     <br>
                     <br>
                     <label>Date: </label>
+                    <br>
                     <input type="date" id="year"></input>
                     <br>
                     <br>
                     <label>Summary: </label>
+                    <br>
                     <textarea name="summary" rows="4" cols="25" id="summary"></textarea>
                     <menu>
-                        <button id="post_cancel">Cancel</button>
                         <button id="post_save">Save</button>
+                        <button id="post_cancel">Cancel</button>
                     </menu>
                 </dialog>
 
@@ -169,18 +194,21 @@
                 <dialog id= "edit_post_pop">
                     <h2>Create Post</h2>
                     <label>Title: </label>
+                    <br>
                     <input type="text" id="edit_postTitle"></input>
                     <br>
                     <br>
                     <label>Date: </label>
+                    <br>
                     <input type="date" id="edit_year"></input>
                     <br>
                     <br>
                     <label>Summary: </label>
+                    <br>
                     <textarea name="summary" rows="4" cols="25" id="edit_summary"></textarea>
                     <menu>
-                        <button id="edit_post_cancel">Cancel</button>
                         <button id="edit_post_save">Save</button>
+                        <button id="edit_post_cancel">Cancel</button>
                     </menu>
                 </dialog>
 
